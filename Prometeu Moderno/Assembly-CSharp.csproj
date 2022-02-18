@@ -64,11 +64,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\LowPolyWater\Water.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
     <Compile Include="Assets\Unity Terrain2Obj Script C#.cs" />
-    <None Include="Assets\LowPolyWater\FlatShadedWaterWithEdgeBlend.shader" />
+    <Compile Include="Assets\Water\MakeSomeNoise.cs" />
+    <Compile Include="Assets\Water\WaterPlaneGen.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/joaov/Documents/GitHub/prometeu-moderno/Prometeu Moderno/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
