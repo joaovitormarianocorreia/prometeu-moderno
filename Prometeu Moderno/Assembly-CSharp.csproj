@@ -65,10 +65,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\MouseLook.cs" />
-    <Compile Include="Assets\Object2Terrain.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-    <Compile Include="Assets\Unity Terrain2Obj Script C#.cs" />
     <Compile Include="Assets\Water\MakeSomeNoise.cs" />
     <Compile Include="Assets\Water\WaterPlaneGen.cs" />
     <Reference Include="Unity.Timeline.Editor">
