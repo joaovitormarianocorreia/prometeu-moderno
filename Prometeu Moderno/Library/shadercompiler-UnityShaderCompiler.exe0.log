@@ -1,7 +1,7 @@
 Base path: 'C:/Program Files/Unity/Editor/Data', plugins path 'C:/Program Files/Unity/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: preprocess
-  insize=3115 outsize=305 ok=1
+  insize=3466 outsize=1210 ok=1
 Cmd: preprocess
   insize=6536 outsize=3109 ok=1
 Cmd: preprocess
@@ -13,17 +13,11 @@ Cmd: preprocess
 Cmd: preprocess
   insize=11491 outsize=934 ok=1
 Cmd: preprocess
-  insize=1521 outsize=219 ok=1
-Cmd: preprocessCompute
-  insize=1170 outsize=1176 ok=1
-Cmd: preprocessCompute
-  insize=3064 outsize=3070 ok=1
-Cmd: preprocessCompute
-  insize=10871 outsize=10881 ok=1
+  insize=3464 outsize=1257 ok=1
 Cmd: preprocess
-  insize=1181 outsize=305 ok=1
+  insize=10559 outsize=3882 ok=1
 Cmd: preprocess
-  insize=12353 outsize=531 ok=1
+  insize=3478 outsize=2592 ok=1
 Cmd: preprocess
   insize=12355 outsize=9122 ok=1
 Cmd: compileSnippet
@@ -43,9 +37,7 @@ Cmd: compileSnippet
 Cmd: compileSnippet
   api=4 type=1 insize=71996 outsize=1178 kw=UNITY_PASS_META pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocess
-  insize=1802 outsize=304 ok=1
-Cmd: preprocessCompute
-  insize=4847 outsize=4855 ok=1
+  insize=7773 outsize=2674 ok=1
 Cmd: preprocess
   insize=3464 outsize=1257 ok=1
 Cmd: preprocess
@@ -53,7 +45,7 @@ Cmd: preprocess
 Cmd: preprocessCompute
   insize=3390 outsize=3396 ok=1
 Cmd: preprocess
-  insize=6092 outsize=364 ok=1
+  insize=10548 outsize=3873 ok=1
 Cmd: preprocess
   insize=597 outsize=216 ok=1
 Cmd: preprocess
@@ -109,7 +101,7 @@ Cmd: compileSnippet
 Cmd: compileSnippet
   api=4 type=1 insize=16423 outsize=462 kw=_SUNDISK_NONE pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocess
-  insize=4766 outsize=689 ok=1
+  insize=4297 outsize=3592 ok=1
 Cmd: preprocess
   insize=4297 outsize=3592 ok=1
 Cmd: preprocess
