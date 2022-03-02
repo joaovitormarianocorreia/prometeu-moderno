@@ -164,9 +164,7 @@ namespace UnityEngine.Rendering.PostProcessing
 
         public override void Render(PostProcessRenderContext context)
         {
-            // The coc is stored in alpha so we need a 4 channels target. Note that using ARGB32
-            // will result in a very weak near-blur.
-            var colorFormat = context.camera.allowHDR ? RenderTextureFormat.ARGBHalf : RenderTextureFormat.ARGB32;
+            var colorFormat = context.sourceFormat;
             var cocFormat = SelectFormat(RenderTextureFormat.R8, RenderTextureFormat.RHalf);
 
             // Avoid using R8 on OSX with Metal. #896121, https://goo.gl/MgKqu6
