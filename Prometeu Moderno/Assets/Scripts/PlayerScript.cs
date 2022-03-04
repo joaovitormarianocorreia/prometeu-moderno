@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    public int maxHealth = 5;
+    public int maxHealth = 6;
     public int currentHealth;
-    public int maxTasks = 0;
-    public int currentTasks;
+    public int maxTasks = 6;
+    public int currentTasks = 0;
     private float healthPeriod = 0.0f;
+    private float taskPeriod = 0.0f; 
 
     public HealthBar healthBar;
     public TaskBar taskBar;
- 
+    public Quest questWindow;
+
     private void Start()
     {
         currentHealth = maxHealth;
         currentTasks = maxTasks;
         healthBar.SetHealth(currentHealth);
         taskBar.SetTask(currentTasks);
+        questWindow.SetDescription("Recolha galhos na floresta antiga");
     }
     
     void Update()
@@ -32,9 +35,18 @@ public class PlayerScript : MonoBehaviour
             }
             healthPeriod = 0;
         }
+        if (taskPeriod > 10.0)
+        {
+            OpenQuestWindow();
+        }
         healthPeriod += UnityEngine.Time.deltaTime;
+        taskPeriod += UnityEngine.Time.deltaTime;
     }
 
+    public void OpenQuestWindow()
+    {
+        //questWindow.SetActive(true);
+    }
 
     public void OnTriggerEnter(Collider other)
     {
