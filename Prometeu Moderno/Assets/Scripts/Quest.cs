@@ -1,14 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
-public class Quest
+public class Quest : MonoBehaviour
 {
-    public bool isActive;
-    public string description;
+    public List<Goal> Goals { get; set; } = new List<Goal>();
+    public string QuestName { get; set; }
+    public string Description { get; set; }
+    public bool Completed { get; set; }
 
-    public void SetDescription(string desc)
+    public void CheckGoals()
     {
-        this.description = desc;
+        
     }
+
+
 }
