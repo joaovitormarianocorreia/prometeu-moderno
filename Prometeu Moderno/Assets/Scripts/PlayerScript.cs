@@ -9,7 +9,8 @@ public class PlayerScript : MonoBehaviour
     public int maxTasks = 6;
     public int currentTasks = 0;
     private float healthPeriod = 0.0f;
-    private float taskPeriod = 0.0f; 
+    private float taskPeriod = 0.0f;
+    private bool gardenTaskAssigned = false;
 
     public HealthBar healthBar;
     public TaskBar taskBar;
@@ -41,16 +42,11 @@ public class PlayerScript : MonoBehaviour
         if (taskPeriod > 10.0)
         {
             OpenQuestWindow();
+            gardenTaskAssigned = true;
+            taskPeriod = 0;
         }
         healthPeriod += UnityEngine.Time.deltaTime;
         taskPeriod += UnityEngine.Time.deltaTime;
-    }
-
-    public void OpenQuestWindow()
-    {
-        gardenTaskWindow.SetActive(true);
-        gardenTaskLight = goalGardenTask.GetComponent<Light>();
-        gardenTaskLight.enabled = true;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -67,8 +63,24 @@ public class PlayerScript : MonoBehaviour
         }
         if (other.tag == "Goals")
         {
-            gardenTaskWindow.SetActive(false);
-            goalGardenTask.SetActive(false);
+            CloseQuestWindow();
         }
+    }
+
+    public void OpenQuestWindow()
+    {
+        if (gardenTaskAssigned == false)
+        {
+            gardenTaskWindow.SetActive(true);
+            gardenTaskLight = goalGardenTask.GetComponent<Light>();
+            gardenTaskLight.enabled = true;
+        }
+    }
+
+    public void CloseQuestWindow()
+    {
+        gardenTaskWindow.SetActive(false);
+        goalGardenTask.SetActive(false);
+        gardenTaskWindow.SetActive(false);
     }
 }
