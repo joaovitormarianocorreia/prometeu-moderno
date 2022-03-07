@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cristals
+  - Goals
   layers:
   - Default
   - TransparentFX

@@ -13,7 +13,9 @@ public class PlayerScript : MonoBehaviour
 
     public HealthBar healthBar;
     public TaskBar taskBar;
-    public Quest questWindow;
+    public GameObject gardenTaskWindow;
+    public GameObject goalGardenTask;
+    public Light gardenTaskLight;
 
     private void Start()
     {
@@ -21,9 +23,10 @@ public class PlayerScript : MonoBehaviour
         currentTasks = maxTasks;
         healthBar.SetHealth(currentHealth);
         taskBar.SetTask(currentTasks);
-        questWindow.SetDescription("Recolha galhos na floresta antiga");
+        gardenTaskLight = goalGardenTask.GetComponent<Light>();
+        gardenTaskLight.enabled = false;
     }
-    
+
     void Update()
     {
         if (healthPeriod > 5.0)
@@ -45,7 +48,9 @@ public class PlayerScript : MonoBehaviour
 
     public void OpenQuestWindow()
     {
-        //questWindow.SetActive(true);
+        gardenTaskWindow.SetActive(true);
+        gardenTaskLight = goalGardenTask.GetComponent<Light>();
+        gardenTaskLight.enabled = true;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -59,6 +64,11 @@ public class PlayerScript : MonoBehaviour
                 currentHealth++;
                 healthBar.SetHealth(currentHealth);
             }
+        }
+        if (other.tag == "Goals")
+        {
+            gardenTaskWindow.SetActive(false);
+            goalGardenTask.SetActive(false);
         }
     }
 }
