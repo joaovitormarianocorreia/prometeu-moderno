@@ -10,13 +10,16 @@ public class PlayerScript : MonoBehaviour
     public int currentTasks = 0;
     private float healthPeriod = 0.0f;
     private float taskPeriod = 0.0f;
+    private float sec = 3.0f;
     private bool gardenTaskAssigned = false;
 
     public HealthBar healthBar;
     public TaskBar taskBar;
     public GameObject gardenTaskWindow;
     public GameObject goalGardenTask;
+    public GameObject taskFinished;
     public Light gardenTaskLight;
+    
 
     private void Start()
     {
@@ -82,5 +85,19 @@ public class PlayerScript : MonoBehaviour
         gardenTaskWindow.SetActive(false);
         goalGardenTask.SetActive(false);
         gardenTaskWindow.SetActive(false);
+        taskFinished.SetActive(true);
+        StartCoroutine(DisableMessage(sec));
+    }
+
+    IEnumerator DisableMessage(float seconds)
+    {
+        //if (taskFinished.activeInHierarchy)
+        //{
+        //    taskFinished.SetActive(false);
+        //}
+
+        yield return new WaitForSeconds(seconds);
+
+        taskFinished.SetActive(false);
     }
 }
