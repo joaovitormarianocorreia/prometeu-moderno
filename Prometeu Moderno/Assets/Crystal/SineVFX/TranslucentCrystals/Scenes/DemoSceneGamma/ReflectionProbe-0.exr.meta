@@ -1,10 +1,21 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 01002d6e01ad23a41b427f8dda71563f
 TextureImporter:
   fileIDToRecycleName:
     8900000: generatedCubemap
   externalObjects: {}
   serializedVersion: 4
+=======
+guid: bab171c110119b048ab1ad75ec318e32
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      89: 8900000
+    second: generatedCubemap
+  externalObjects: {}
+  serializedVersion: 10
+>>>>>>> 7fc4225a9ace2595b0a2e6a23e78886852f5cb16
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -22,6 +33,11 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+<<<<<<< HEAD
+=======
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+>>>>>>> 7fc4225a9ace2595b0a2e6a23e78886852f5cb16
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 1
@@ -52,11 +68,20 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 0
   textureShape: 2
+<<<<<<< HEAD
+=======
+  singleChannelComponent: 0
+>>>>>>> 7fc4225a9ace2595b0a2e6a23e78886852f5cb16
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
+<<<<<<< HEAD
   - buildTarget: DefaultTexturePlatform
+=======
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+>>>>>>> 7fc4225a9ace2595b0a2e6a23e78886852f5cb16
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -66,12 +91,30 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
+=======
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+>>>>>>> 7fc4225a9ace2595b0a2e6a23e78886852f5cb16
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
     physicsShape: []
+<<<<<<< HEAD
   spritePackingTag: 
+=======
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+>>>>>>> 7fc4225a9ace2595b0a2e6a23e78886852f5cb16
   userData: 
   assetBundleName: 
   assetBundleVariant: 
