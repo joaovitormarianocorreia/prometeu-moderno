@@ -7,9 +7,11 @@ public class PlayerScript : MonoBehaviour
     public int maxHealth = 6; // Delimita o nível máximo de pontos de saúde do jogador
     public int currentHealth; // Armazena o nível de saúde do jogador
     public int maxTasks = 6; // Delimita o nível máximo de pontos de tarefa do jogador
-    public int currentTasks = 0; // Delimita o nível atual de saúde do jogador 
-    private float healthPeriod = 0.0f; // Timer para diminuir o nível de saúde 
+    public int currentTasks; // Delimita o nível atual de saúde do jogador 
+    private float decreaseHealth = 0.0f; // Timer para diminuir o nível de saúde 
+    private float decreaseTask = 0.0f; // Timer para diminuir o nível de pontos de tarefas
     private float taskPeriod = 0.0f; // Timer para atribuição de tarefas
+
     private float sec = 3.0f; // Valor de exibição de mensagem de tarefa concluída
     private bool gardenTaskAssigned = false; // Booleana de atribuição de tarefa do jardim 
     private bool gardenTaskCompleted = false; // Booleana de finalização de tarefa do jardim
@@ -44,16 +46,17 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-        if (healthPeriod > 5.0)
-        {
+        if (decreaseHealth > 15.0)
             UpdateHealthBar();
-        }
+        if (decreaseTask > 20.0)
+            UpdateTaskBar();
         if (taskPeriod > 10.0)
         {
             OpenQuestWindow();
             taskPeriod = 0;
         }
-        healthPeriod += UnityEngine.Time.deltaTime;
+        decreaseHealth += UnityEngine.Time.deltaTime;
+        decreaseTask += UnityEngine.Time.deltaTime;
         taskPeriod += UnityEngine.Time.deltaTime;
     }
 
@@ -64,7 +67,7 @@ public class PlayerScript : MonoBehaviour
             other.gameObject.SetActive(false);
             if (currentHealth < 5)
             {
-                healthPeriod = 0;
+                decreaseHealth = 0;
                 currentHealth++;
                 healthBar.SetHealth(currentHealth);
             }
@@ -82,17 +85,16 @@ public class PlayerScript : MonoBehaviour
             currentHealth--;
             healthBar.SetHealth(currentHealth);
         }
-        healthPeriod = 0;
+        decreaseHealth = 0;
     }
-
     public void UpdateTaskBar()
     {
-        if (currentHealth > 0)
+        if (currentTasks > 0)
         {
-            currentHealth--;
-            healthBar.SetHealth(currentHealth);
+            currentTasks--;
+            taskBar.SetTask(currentTasks);
         }
-        healthPeriod = 0;
+        decreaseTask = 0;
     }
 
     public void OpenQuestWindow()
@@ -126,12 +128,15 @@ public class PlayerScript : MonoBehaviour
             gardenTaskWindow.SetActive(false);
             goalGardenTask.SetActive(false);
             gardenTaskCompleted = true;
+            taskPeriod = 0;
+            decreaseTask = 0;
         }
         if (gardenTaskAssigned == true && forestTaskAssigned == true)
         {
             AudioSource.PlayClipAtPoint(audio, camera.transform.position);
             forestTaskWindow.SetActive(false);
             goalForestTask.SetActive(false);
+            decreaseTask = 0;
         }
         taskFinished.SetActive(true);
         StartCoroutine(DisableMessage(sec));
