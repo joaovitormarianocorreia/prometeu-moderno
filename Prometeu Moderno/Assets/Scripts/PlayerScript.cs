@@ -25,6 +25,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject goalForestTask; // Objeto de objetivo da tarefa da floresta
     public Light forestTaskLight; // Iluminação do objetivo da floresta
     public GameObject taskFinished; // Objeto da mensagem de tarefa finalizada
+    public AudioSource audioTask; // Audio de tarefa concluída
 
     private void Start()
     {
