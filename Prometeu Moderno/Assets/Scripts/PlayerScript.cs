@@ -83,6 +83,16 @@ public class PlayerScript : MonoBehaviour
         healthPeriod = 0;
     }
 
+    public void UpdateTaskBar()
+    {
+        if (currentHealth > 0)
+        {
+            currentHealth--;
+            healthBar.SetHealth(currentHealth);
+        }
+        healthPeriod = 0;
+    }
+
     public void OpenQuestWindow()
     {
         // Atribui a tarefa de colheita
