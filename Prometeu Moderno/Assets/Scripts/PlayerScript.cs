@@ -14,7 +14,8 @@ public class PlayerScript : MonoBehaviour
     private bool gardenTaskAssigned = false; // Booleana de atribuição de tarefa do jardim 
     private bool gardenTaskCompleted = false; // Booleana de finalização de tarefa do jardim
     private bool forestTaskAssigned = false; // Booleana de atribuição de tarefa da floresta
-    
+    [SerializeField] private Camera camera;
+    [SerializeField] private AudioClip audio;
 
     public HealthBar healthBar; // Barra de nível de pontos de saúde
     public TaskBar taskBar; // Barra de nível das tarefas 
@@ -24,7 +25,8 @@ public class PlayerScript : MonoBehaviour
     public GameObject forestTaskWindow; // Janela de exibição do enunciado da tarefa da floresta
     public GameObject goalForestTask; // Objeto de objetivo da tarefa da floresta
     public Light forestTaskLight; // Iluminação do objetivo da floresta
-    public GameObject taskFinished; // Objeto da mensagem de tarefa finalizada
+    public GameObject taskFinished; // Objeto da mensagem de tarefa 
+    
 
     private void Start()
     {
@@ -120,12 +122,14 @@ public class PlayerScript : MonoBehaviour
         taskBar.SetTask(currentTasks);
         if (gardenTaskAssigned == true && forestTaskAssigned == false)
         {
+            AudioSource.PlayClipAtPoint(audio, camera.transform.position);
             gardenTaskWindow.SetActive(false);
             goalGardenTask.SetActive(false);
             gardenTaskCompleted = true;
         }
         if (gardenTaskAssigned == true && forestTaskAssigned == true)
         {
+            AudioSource.PlayClipAtPoint(audio, camera.transform.position);
             forestTaskWindow.SetActive(false);
             goalForestTask.SetActive(false);
         }
