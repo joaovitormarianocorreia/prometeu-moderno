@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class PlayerScript : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         // Inicialização dos níveis 
         currentHealth = maxHealth;
         currentTasks = maxTasks;
@@ -85,6 +87,10 @@ public class PlayerScript : MonoBehaviour
             currentHealth--;
             healthBar.SetHealth(currentHealth);
         }
+        else
+        {
+            SceneManager.LoadScene("GameOver");
+        }
         decreaseHealth = 0;
     }
     public void UpdateTaskBar()
@@ -93,6 +99,10 @@ public class PlayerScript : MonoBehaviour
         {
             currentTasks--;
             taskBar.SetTask(currentTasks);
+        }
+        else
+        {
+            SceneManager.LoadScene("GameOver");
         }
         decreaseTask = 0;
     }

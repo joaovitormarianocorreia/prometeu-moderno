@@ -1158,7 +1158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.022873377, g: 0.015886439, b: 0.1981132, a: 1}
+  m_Color: {r: 0.10980392, g: 0.22352941, b: 0.6039216, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2094,12 +2094,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Controles\n  - WASD: Movimenta\xE7\xE3o do personagem. \n  - Q: Abrir o
-    menu. \n  - E: Manter pressionado para realizar atividades. \n  - Mouse: Movimenta
-    a cabe\xE7a do personagem. \n\n\nObjetivos: \n  - O jogador deve realizar as tarefas
-    necess\xE1rias \xE0 manuten\xE7\xE3o do vilarejo, ao mesmo que coleta os cristas
-    m\xE1gicos. Caso n\xE3o sejam coletados os cristais m\xE1gicos o n\xEDvel de sa\xFAde
-    do jogador ir\xE1 cair. \n\n"
+  m_text: "Controles\n  [WASD] Movimenta\xE7\xE3o do personagem. \n  [Q] Abrir o menu.
+    \n  [Mouse] Movimenta a cabe\xE7a do personagem. \n\n\nObjetivos: \n  - O jogador
+    deve realizar as tarefas necess\xE1rias \xE0 manuten\xE7\xE3o do vilarejo, ao
+    mesmo que coleta os cristas m\xE1gicos. Caso n\xE3o sejam coletados os cristais
+    m\xE1gicos o n\xEDvel de sa\xFAde do jogador ir\xE1 cair. \n  - As tarefas atribu\xEDdas
+    aparecer\xE3o em uma janela disposta na lateral direita da tela, logo abaixo dos
+    indicadores de sa\xFAde e tarefas e no mapa aparecer\xE3o como um ponto de luz
+    azul. \n  - Os cristais flutuam e giram em determinados pontos do mapa e podem
+    ser localizados pela caracter\xEDstica luz verde que emitem. \n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2144,7 +2147,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 643
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -2168,12 +2171,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1831392526}
-    characterCount: 386
+    characterCount: 644
     spriteCount: 0
-    spaceCount: 79
-    wordCount: 60
+    spaceCount: 125
+    wordCount: 103
     linkCount: 0
-    lineCount: 12
+    lineCount: 16
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
